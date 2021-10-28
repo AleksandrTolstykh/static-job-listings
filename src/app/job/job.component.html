@@ -1,0 +1,23 @@
+<div class="container" [ngClass]="{'featured': job.featured}" (window:resize)="onResize($event)">
+  <img [src]="job.logo" alt="logo">
+  <div class="info">
+    <h4>
+      {{job.company}}
+      <span *ngIf="job.new" class="new-label">NEW!</span>
+      <span *ngIf="job.featured" class="featured-label">FEATURED</span>
+    </h4>
+    <h3>{{job.position}}</h3>
+    <p>{{job.postedAt}} &#8226; {{job.contract}} &#8226; {{job.location}}</p>
+  </div>
+  <hr *ngIf="mobile">
+  <div class="skills">
+    <button mat-button (click)="addFilter($event)">{{job.role}}</button>
+    <button mat-button (click)="addFilter($event)">{{job.level}}</button>
+    <span *ngFor="let language of job.languages">
+      <button mat-button (click)="addFilter($event)">{{language}}</button>
+    </span>
+    <span *ngFor="let tool of job.tools">
+      <button mat-button (click)="addFilter($event)">{{tool}}</button>
+    </span>
+  </div>
+</div>

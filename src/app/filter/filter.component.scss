@@ -1,0 +1,76 @@
+.container {
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  margin: 20vh auto 0 auto;
+  height: 10vh;
+  width: 75%;
+  @media screen and (max-width: 1024px) {
+    margin: 15vh auto 0 auto;
+    height: 20vh;
+  }
+  @media screen and (max-width: 768px) {
+    margin: 15vh auto 0 auto;
+    height: 20vh;
+    width: 90%;
+  }
+
+  .element {
+    background-color: hsl(180, 31%, 95%);
+    border-radius: 5px;
+    color: hsl(180, 29%, 50%);
+    display: inline-block;
+    font-weight: 700;
+    margin-left: 15px;
+    margin-right: 5px;
+    @media screen and (max-width: 1024px) {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    p {
+      margin: 0;
+      padding: 0 5px;
+      display: inline-block;
+    }
+
+    .remove-button {
+      background-color: hsl(180, 29%, 50%);
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      height: 40px;
+      display: inline-block;
+      min-width: 40px;
+      &:hover {
+        background-color: hsl(180, 14%, 20%);
+      }
+    }
+
+    img  {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  .clear-button {
+    color: hsl(180, 29%, 50%);
+    font-family: "Spartan";
+    font-weight: 700;
+    margin-left: auto;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  ::ng-deep .mat-button-focus-overlay {
+    display: none;
+  }
+}
+
+.hidden {
+  opacity: 0;
+  .clear-button:hover {
+    cursor: auto;
+  }
+}

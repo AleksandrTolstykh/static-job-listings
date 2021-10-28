@@ -1,0 +1,101 @@
+.container {
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  margin: 5vh auto 0 auto;
+  height: 25vh;
+  width: 75%;
+  @media screen and (max-width: 1024px) {
+    height: 30vh;
+  }
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 45vh;
+    width: 90%;
+  }
+
+  img {
+    margin: 25px;
+    @media screen and (max-width: 768px) {
+      margin: 0;
+      position: relative;
+      bottom: 20px;
+      left: 25px;
+      width: 44px;
+      height: 44px;
+    }
+  }
+
+  .info {
+    h3:hover {
+      color: hsl(180, 29%, 50%);
+      cursor: pointer;
+    }
+    h4 {
+      color: hsl(180, 29%, 50%);
+    }
+    p {
+      color: hsl(180, 8%, 52%);
+    }
+    .new-label {
+      background-color: hsl(180, 29%, 50%);
+      color: hsl(180, 52%, 96%);
+      border-radius: 15px;
+      font-size: 12px;
+      margin: 0 5px;
+      padding: 5px;
+    }
+    .featured-label {
+      background-color: hsl(180, 14%, 20%);
+      color: hsl(180, 52%, 96%);
+      border-radius: 15px;
+      font-size: 12px;
+      margin: 0 5px;
+      padding: 5px;
+    }
+    @media screen and (max-width: 768px) {
+      margin-left: 25px;
+    }
+  }
+
+  hr {
+    color: hsl(180, 8%, 52%);
+    width: 85%;
+  }
+
+  .skills {
+    margin-left: auto;
+    @media screen and (max-width: 768px) {
+      margin-left: 25px;
+    }
+    .mat-button {
+      background-color: hsl(180, 31%, 95%);
+      color: hsl(180, 29%, 50%);
+      font-family: "Spartan";
+      font-weight: 700;
+      margin-right: 10px;
+      &:hover {
+        background-color: hsl(180, 29%, 50%);
+        color: hsl(180, 31%, 95%);
+      }
+      @media screen and (max-width: 1200px) {
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+      @media screen and (max-width: 768px) {
+        margin-top: 15px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  ::ng-deep .mat-button-focus-overlay {
+    display: none;
+  }
+}
+
+.featured {
+  border-left: 5px solid hsl(180, 29%, 50%);
+}

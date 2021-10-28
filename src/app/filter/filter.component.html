@@ -1,0 +1,11 @@
+<div [ngClass]="{'hidden': filters.length === 0}" class="container">
+  <div>
+    <div *ngFor="let filter of filters" class="element">
+      <p>{{filter}}</p>
+      <button [name]="filter" class="remove-button" mat-button (click)="removeFilter($event)">
+        <img [name]="filter" src="assets/icon-remove.svg" alt="remove" />
+      </button>
+    </div>
+  </div>
+  <button class="clear-button" mat-button (click)="clearFilter($event)">Clear</button>
+</div>

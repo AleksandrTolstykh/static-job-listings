@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Spartan";
+  font-weight: 500;
+  background: url("assets/bg-header-desktop.svg"), linear-gradient(hsl(180, 29%, 50%) 100%, hsl(180, 52%, 96%) 100%);
+  background-color: hsl(180, 52%, 96%);
+  background-repeat: no-repeat;
+  background-size: 100vw 25vh;
+  @media screen and (max-width: 768px) {
+    background: url("assets/bg-header-mobile.svg"), linear-gradient(hsl(180, 29%, 50%) 100%, hsl(180, 52%, 96%) 100%);
+    background-color: hsl(180, 52%, 96%);
+    background-repeat: no-repeat;
+    background-size: 100vw 25vh;
+  }
+}
